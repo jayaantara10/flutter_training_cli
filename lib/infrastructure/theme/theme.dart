@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_training_cli/infrastructure/theme/colors.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_training_cli/infrastructure/theme/color.scheme.dart';
 
 class TMDBTheme {
-  static ThemeData getLight() {
-    return ThemeData(useMaterial3: true, colorScheme: TMDBLightColorScheme);
+  ThemeData getLight() {
+    return ThemeData(
+      useMaterial3: true,
+      colorScheme: TMDBLightColorScheme,
+      buttonTheme: ButtonThemeData(
+        shape: ,
+        buttonColor: TMDBDarkColorScheme.secondary
+
+        )
+    );
   }
 
-  static ThemeData getDark() {
+  ThemeData getDark() {
     return ThemeData(useMaterial3: true, colorScheme: TMDBDarkColorScheme);
   }
 }

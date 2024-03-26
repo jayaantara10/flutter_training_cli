@@ -17,9 +17,10 @@ class Main extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TMDBTheme theme = TMDBTheme(context: context);
     return GetMaterialApp(
-      theme: TMDBTheme.getLight(),
-      darkTheme: TMDBTheme.getDark(),
+      theme: theme.getLight(),
+      darkTheme: theme.getDark(),
       initialRoute: initialRoute,
       getPages: Nav.routes,
     );
