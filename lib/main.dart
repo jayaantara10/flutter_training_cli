@@ -13,14 +13,16 @@ void main() async {
 
 class Main extends StatelessWidget {
   final String initialRoute;
-  Main(this.initialRoute);
+  const Main(this.initialRoute, {super.key});
 
   @override
   Widget build(BuildContext context) {
-    TMDBTheme theme = TMDBTheme(context: context);
+    final ThemeData lightTheme = TMDBTheme.getLight();
+    final ThemeData darkTheme = TMDBTheme.getDark();
+
     return GetMaterialApp(
-      theme: theme.getLight(),
-      darkTheme: theme.getDark(),
+      theme: lightTheme,
+      darkTheme: darkTheme,
       initialRoute: initialRoute,
       getPages: Nav.routes,
     );
